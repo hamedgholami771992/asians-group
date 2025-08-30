@@ -1,5 +1,3 @@
-# accounts/tests/test_user_view.py
-
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
@@ -11,7 +9,6 @@ User = get_user_model()
 class UserViewSetTest(APITestCase):
 
     def setUp(self):
-        # --- User data ---
         self.user_data = {
             "username": "user1",
             "email": "user1@example.com",

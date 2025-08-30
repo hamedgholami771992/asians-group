@@ -13,7 +13,7 @@ class UserCreateSerializer(serializers.ModelSerializer):
         fields = ["id", "username", "email", "first_name", "last_name", "password"]
 
     def create(self, validated_data):
-        # ✅ Ensure password is hashed
+        # Ensure password is hashed
         user = User.objects.create_user(
             username=validated_data["username"],
             email=validated_data.get("email"),
